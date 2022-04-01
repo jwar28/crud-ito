@@ -10,25 +10,25 @@
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossorigin="anonymous"
         />
-        <!-- JavaScript Bundle with Popper -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"
-        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
+            rel="stylesheet"
+        />
     </head>
 
-    <body class="vh-100">
+    <body class="vh-100" style="font-family: 'Roboto', sans-serif;">
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand">Productos</a>
+            <div class="container d-flex">
+                <a class="navbar-brand px-4">Productos</a>
             </div>
         </nav>
 
         <div class="container mt-4" id="content-container">
             <div class="row d-flex justify-content-around">
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <!-- Add product card -->
                     <div class="card">
                         <div class="card-header text-center">
@@ -38,7 +38,7 @@
                             <!-- Form -->
                             <form id="product-form">
                                 <!-- Name input -->
-                                <div class="form-group">
+                                <div class="form-group mx-4">
                                     <input
                                         type="text"
                                         id="name"
@@ -47,7 +47,7 @@
                                     />
                                 </div>
                                 <!-- Description input -->
-                                <div class="form-group mt-3">
+                                <div class="form-group mt-3 mx-4">
                                     <input
                                         type="text"
                                         id="description"
@@ -56,7 +56,7 @@
                                     />
                                 </div>
                                 <!-- Quantity input -->
-                                <div class="form-group mt-3">
+                                <div class="form-group mt-3 mx-4">
                                     <input
                                         type="number"
                                         id="quantity"
@@ -65,7 +65,7 @@
                                         min="1"
                                     />
                                 </div>
-                                
+
                                 <div class="text-center">
                                     <button class="btn btn-primary mt-4" type="submit">Agregar producto</button>
                                 </div>
