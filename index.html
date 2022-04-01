@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CRUDito</title>
+        <!-- CSS only -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+        <!-- JavaScript Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <body class="vh-100">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand">Productos</a>
+            </div>
+        </nav>
+
+        <div class="container mt-4" id="content-container">
+            <div class="row d-flex justify-content-around">
+                <div class="col-md-5">
+                    <!-- Add product card -->
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h3>Agregar producto</h3>
+                        </div>
+                        <div class="card-body">
+                            <!-- Form -->
+                            <form id="product-form">
+                                <!-- Name input -->
+                                <div class="form-group">
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        placeholder="Nombre del producto"
+                                        class="form-control"
+                                    />
+                                </div>
+                                <!-- Description input -->
+                                <div class="form-group mt-3">
+                                    <input
+                                        type="text"
+                                        id="description"
+                                        placeholder="Descripcion del producto"
+                                        class="form-control"
+                                    />
+                                </div>
+                                <!-- Quantity input -->
+                                <div class="form-group mt-3">
+                                    <input
+                                        type="number"
+                                        id="quantity"
+                                        class="form-control"
+                                        placeholder="Cantidad del producto"
+                                        min="1"
+                                    />
+                                </div>
+                                
+                                <div class="text-center">
+                                    <button class="btn btn-primary mt-4" type="submit">Agregar producto</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products table -->
+                <div class="col-md-6">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="product-list"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Script -->
+        <script src="main.js"></script>
+    </body>
+</html>
